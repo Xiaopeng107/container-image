@@ -1,0 +1,12 @@
+FROM bitnami/kafka:3.6
+
+# Add any customizations or additional software you need here
+# For example:
+# COPY . /app
+# RUN apt-get update && apt-get install -y some-package
+
+# Expose the Kafka ports
+EXPOSE 9092 9093
+
+# Set default command (optional)
+CMD ["kafka-server-start.sh", "/opt/bitnami/kafka/conf/server.properties"]
